@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>Clausuras</title>
+ <meta charset="utf-8" />
+ <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"/>
+ <link rel="stylesheet" href="css/inve.css" />
+ <script src="js/inve.js"></script>
+</head>
+<body>
+ <header id="insetBgd">
+ <h1>Qué son las Clausuras?</h1>
+ </header>
+
+<h1 id="conte">Una clausura es una estructura de una función y su entorno léxico, incluidas las variables del alcance de la función en el momento de la creación de la clausura". Explicándolo de otra manera, con las clausuras en JavaScript se logra que una función interna tenga acceso al alcance de una función externa.</h1>
+
+
+<header id="insetBgd">
+    <h1>Para qué pueden servir?</h1>
+    </header>
+
+
+<h1 id="conte">Las clausuras son muy importantes en cualquier lenguaje de programación, para poder utilizar diferentes funciones y variables de manera externa</h1>
+
+
+<header id="insetBgd">
+    <h1>Cuando se ocupan?</h1>
+</header>
+
+<h1 id="conte">Cuando se necesite enviar una función que tenga una varible interna que sea necesitada ejecutar antes de empezar el proceso</h1>
+
+
+
+<div class="ejem">
+    <div id="eje1">
+        <h1>Ejemplo 1</h1>
+
+    <h1>function a(){<br> 
+    let x = 10;<br>
+    function b(){<br> 
+    function c(){<br>
+    function d(){<br>
+    console.log(x);<br>
+    }<br>
+    d();<br>
+    }<br>
+    c();<br>
+    }<br>
+    b();<br>
+   }<br>
+   a();<br>Contador de 10</h1>
+    </div>
+
+    <div id="eje2">
+        <h1>Ejemplo 2</h1>
+
+    <h1>function sayHello(name) {<br>
+        var text = 'Hello ' + name;<br>
+        var say = function() { console.log(text); }<br>
+        say();<br>
+      }<br>
+      sayHello('Julián');<br></h1>
+    </div>
+
+    <div id="eje3">
+        <h1>Ejemplo 3</h1>
+
+    <h1>class MiClase {<br>
+        constructor(nombre) {<br>
+          this.atributo = nombre;<br>
+        }<br>
+        
+        get nombre() {<br>
+          return this.atributo;<br>
+        }<br>
+      }<br>
+      
+      let obj= new MiClase('Patito');<br>
+      //usando el get<br>
+      console.log(obj.nombre);<br>
+      //accediendo directamente<br>
+      obj.atributo = 'Decepción';<br>
+      console.log(obj.nombre);<br></h1>
+    </div>
+
+
+</div>
+
+</body>
+</html>
